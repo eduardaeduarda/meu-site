@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Meus E-books de Receitas</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #b316be;
+    }
+
+    header {
+      background-color: #5d0d88;
+      color: rgb(240, 235, 241);
+      text-align: center;
+      padding: 20px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+      gap: 20px;
+    }
+
+    .ebook {
+      background-color: white;
+      width: 250px;
+      height: 420px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 15px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .ebook img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .ebook h3 {
+      margin: 10px 0 5px;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    .ebook button {
+      background-color: #4e73df;
+      color: rgb(247, 247, 247);
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .ebook button:hover {
+      background-color: #2e59d9;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Meus E-books de Receitas</h1>
+  </header>
+
+  <div class="container">
+    <div class="ebook">
+      <img src="receita.jpg" alt="Capa E-book 1">
+      <h3>Receitas Caseiras para dona de casa</h3>
+      <button>Baixar</button>
+    </div>
+    <div class="ebook">
+      <img src="capa_livro.jpg" alt="Capa E-book 2">
+      <h3>Doces & Sobremesas</h3>
+      <button>Baixar</button>
+    </div>
+    <div class="ebook">
+      <img src="receita8.jpeg" alt="Capa E-book 3">
+      <h3>Comida Brasileira</h3>
+      <button>Baixar</button>
+    </div>
+    <div class="ebook">
+      <img src="receita3.jpg" alt="Capa E-book 4">
+      <h3>Receitas Veganas</h3>
+      <button>Baixar</button>
+    </div>
+    <div class="ebook">
+      <img src="receita4.webp" alt="Capa E-book 5">
+      <h3>doces</h3>
+      <button>Baixar</button>
+    </div>
+    <div class="ebook">
+      <img src="receita5.webp" alt="Capa E-book 6">
+      <h3>Receitas caseira</h3>
+      <button>Baixar</button>
+    </div>
+    <div class="ebook">
+      <img src="receita6.webp" alt="Capa E-book 7">
+      <h3>Café da Manhã</h3>
+      <button>Baixar</button>
+    </div>
+    <div class="ebook">
+      <img src="receita7.webp" alt="Capa E-book 8">
+      <h3>salada</h3>
+      <button>Baixar</button>
+    </div>
+  </div>
+</body>
+</html>
+<!-- MENU DO CLIENTE -->
+<nav class="menu-cliente">
+  <div class="logo">📚 Meu E-book</div>
+  <ul class="menu-opcoes">
+    <li><a href="#">Início</a></li>
+    <li><a href="#">Perfil</a></li>
+    <li><a href="#">Carrinho 🛒 (<span id="contador-carrinho">0</span>)</a></li>
+  </ul>
+</nav>
+
+<style>
+  .menu-cliente {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4B0082;
+    padding: 15px;
+    color: white;
+    font-family: sans-serif;
+  }
+
+  .menu-cliente .logo {
+    font-size: 22px;
+    font-weight: bold;
+  }
+
+  .menu-opcoes {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+  }
+
+  .menu-opcoes li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .menu-opcoes li a:hover {
+    text-decoration: underline;
+  }
+</style>
+
+<script>
+  // Simulação do carrinho
+  let itensNoCarrinho = 0;
+  const contador = document.getElementById('contador-carrinho');
+
+  // Exemplo: ao clicar no botão 'Comprar'
+  function adicionarAoCarrinho() {
+    itensNoCarrinho++;
+    contador.textContent = itensNoCarrinho;
+  }
+</script>
